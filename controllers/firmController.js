@@ -20,7 +20,7 @@ const addFirm = async (req, res) => {
         const { firmName, area, category, region, offer } = req.body;
 
         // Check if the image was uploaded
-        const image = req.file ? req.file.filename : undefined;
+        const image = req.file? req.file.filename : undefined;
 
         // Ensure vendor exists
         const vendor = await Vendor.findById(req.vendorId);
